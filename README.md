@@ -1,20 +1,19 @@
-#**Traffic Sign Recognition** 
+## Traffic Sign Recognition 
 
 The goal of this project is to develop a deep neural network classifier for the German Traffic Sign Recognition Benchmark (GTSRB). The well known LeNet-5 network architecture will be used as a basis for this task.
 
-The data set contains 34799 training images and 12630 testing images that each belong to one of 43 classes. All images have a size of 32x32 pixels. 
-
-The whole project is contained in [this jupyter notebook](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
-
-An exploratory visualization of the dataset is contained in the jupyter notebook
-
-The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
+Some of the goals of this project are:
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
+
+The data set contains 34799 training images and 12630 testing images that each belong to one of 43 classes. All images have a size of 32x32 pixels. 
+
+The whole project is contained in [this jupyter notebook](https://github.com/Corni33/CarND_P2_TrafficSigns/blob/master/Traffic_Sign_Classifier.ipynb).
+
+Some of the more important points will be further discussed in the following writeup.
+
 
 
 [//]: # (Image References)
