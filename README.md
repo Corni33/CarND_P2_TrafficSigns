@@ -2,7 +2,7 @@
 
 The goal of this project is to develop a deep neural network classifier for the German Traffic Sign Recognition Benchmark (GTSRB). The well known LeNet-5 network architecture will be used as a basis for this task.
 
-Some of the goals of this project are:
+Some of the goals of this project are to:
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
@@ -30,7 +30,7 @@ Some of the more important points will be further discussed in the following wri
 
 ---
 
-###Writeup / README
+## Writeup 
 
 ###Data Set Summary & Exploration
 
@@ -38,18 +38,13 @@ Some of the more important points will be further discussed in the following wri
 
 The GTSRB data set contains 34799 training examples, 4410 validation examples and 12630 testing images that each belong to one of 43 classes. 
 All images in the data set have a size of 32x32 pixels. 
-These statistics are calculated in the code cells 1 of the notebook.
+These statistics are calculated in the first code cell of the notebook.
 
 
 ####**2. Include an exploratory visualization of the dataset and identify where the code is in your code file.**
 
 An exploratory visualization of the GTSRB data set is performed in the code cells 2 to 5 of the notebook.
-
-
-
-**Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...**
-
-![alt text][image1]
+After examining the number of training examples per class, some of the classes with relatively many and some of the classes with relatively few examples are sampled and plotted. 
 
 
 ###Design and Test a Model Architecture
