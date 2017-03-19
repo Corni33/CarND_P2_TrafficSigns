@@ -8,10 +8,9 @@ Some of the goals of this project are to:
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 
-
-
 The whole project is contained in [this jupyter notebook](https://github.com/Corni33/CarND_P2_TrafficSigns/blob/master/Traffic_Sign_Classifier.ipynb).
-Some of the more important points will be further discussed in the following writeup.
+In addition to code, the notebook also contains explanations and rationales.
+In the following writeup some additional commentary is given.
 
 [//]: # (Image References)
 
@@ -32,7 +31,7 @@ Some of the more important points will be further discussed in the following wri
 
 ## Writeup 
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
 #### **1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.**
 
@@ -41,25 +40,18 @@ All images in the data set have a size of 32x32 pixels.
 These statistics are calculated in the first code cell of the notebook.
 
 
-####**2. Include an exploratory visualization of the dataset and identify where the code is in your code file.**
+#### **2. Include an exploratory visualization of the dataset and identify where the code is in your code file.**
 
 An exploratory visualization of the GTSRB data set is performed in the code cells 2 to 5 of the notebook.
 After examining the number of training examples per class, some of the classes with relatively many and some of the classes with relatively few examples are sampled and plotted. 
 
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
 ####**1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.**
 
-The code for this step is contained in the fourth code cell of the IPython notebook.
+The preprocessing steps, which include grayscaling and normalization of the image pixel data, are contained in the code cells 6 to 8 of the IPython notebook.
 
-As a first step, I decided to convert the images to grayscale because ...
-
-Here is an example of a traffic sign image before and after grayscaling.
-
-![alt text][image2]
-
-As a last step, I normalized the image data because ...
 
 ####**2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)**
 
