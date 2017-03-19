@@ -71,23 +71,18 @@ The code for the final model is located in cell 10 of the notebook. The model co
 | Convolution 5x5 | 1x1 stride, valid padding, outputs 28x28x10 	|
 | RELU					       |												                                     |
 | Max pooling	2x2 | 2x2 stride, valid padding, outputs 14x14x10 				 |
-
 | Convolution 5x5 | 1x1 stride, valid padding, outputs 10x10x20 	|
 | RELU					       |												                                     |
 | Max pooling	2x2 | 2x2 stride, valid padding, outputs 5x5x20 				   |
-
 | Fully connected		| input = 500, output = 120        					|
 | RELU					       |												                                  |
 | Dropout					       |												                               |
-
 | Fully connected		| input = 120, output = 84        					|
 | RELU					       |												                                  |
 | Dropout					       |												                               |
-
 | Fully connected		| input = 84, output = 60        					|
 | RELU					       |												                                  |
 | Dropout					       |												                               |
-
 | Fully connected		| input = 60, output = 43        					|
 | Softmax				     |         									|
  
