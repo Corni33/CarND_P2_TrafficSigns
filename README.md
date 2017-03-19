@@ -67,11 +67,11 @@ The code for the final model is located in cell 10 of the notebook. The model co
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
+| Input         		| 32x32 grayscale image   							                 | 
+| Convolution 5x5 | 1x1 stride, valid padding, outputs 28x28x10 	|
+| RELU					       |												                                     |
+| Max pooling	2x2 | 2x2 stride,  outputs 14x14x10 				                |
+| Convolution 3x3	 | etc.      									|
 | Fully connected		| etc.        									|
 | Softmax				| etc.        									|
 |						|												|
