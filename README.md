@@ -29,7 +29,7 @@ In the following writeup some additional commentary is given.
 
 ### Data Set Summary & Exploration
 
-The GTSRB data set contains 34799 training examples, 4410 validation examples and 12630 testing images that each belong to one of 43 classes. 
+The data set contains 34799 training examples, 4410 validation examples and 12630 testing images that each belong to one of 43 classes. 
 All images in the data set have a size of 32x32 pixels. 
 These statistics are calculated in the first code cell of the notebook.
 
@@ -37,22 +37,17 @@ An exploratory visualization of the GTSRB data set is performed in the code cell
 After examining the number of training examples per class, some of the classes with relatively many and some of the classes with relatively few examples are sampled and plotted. 
 
 
-### Design and Test a Model Architecture
-
-#### **1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.**
+### Preprocessing
 
 The preprocessing steps, which include grayscaling and normalization of the image pixel data, are contained in the code cells 6 to 8 of the IPython notebook.
 
-
-#### **2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)**
-
 During examination of the training data it became apparent, that some classes have a lot less training examples than others. 
-While training the network, these rare classes would therefore occur less often, have less influence on the loss function and as a result would probably be predicted with less accuracy after training has finished. 
+While training the network, these rare classes would occur less often, have less influence on the loss function and as a result would probably be predicted with less accuracy after training has finished. 
 In order to improve classification for these rare classes, their number of training examples has been artificially increased by duplicating existing examples. 
 The code for this operation is contained in code cell 9 of the IPython notebook.  
 
 
-#### **3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.**
+### Model Architecture
 
 The employed neural network model architecture is based on the LeNet-5 architecture.
 After adjusting merely the number of output classes, the model showed a validation accuracy of about 90%. 
@@ -60,7 +55,7 @@ After adjusting merely the number of output classes, the model showed a validati
 To further enhance image classification the convolutional layers have been made deeper and an additional fully connected layer has been added. 
 As these changes introduced many new degrees of freedom, the model started to overfit which caused the validation accuracy to decline.
 To prevent the model from overfitting, dropout has been added to all fully connected layers. 
-The model now reached a validation accuracy between 96 and 97%.
+The model now reaches a validation accuracy of about 96 to 97%.
 
 The code for the final model is located in cell 10 of the notebook. The model consits of the following layers:
 
@@ -87,8 +82,17 @@ The code for the final model is located in cell 10 of the notebook. The model co
 | Softmax				     |         									|
  
 
+### Model Training
 
 ####**4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.**
+
+After defining the model architecture, its weights have been initialized with a truncated normal distribution (mean=0 and sigma=0.1) and the model was trained for 20 epochs using the Adam optimizer.
+The learning rate was set to 0.001 and a btach size of 128 images was chosen.
+The code for training the model is in cells 11 and 12 of the notebook.
+
+
+
+initialized 
 
 The code for training the model is located in the eigth cell of the ipython notebook. 
 
