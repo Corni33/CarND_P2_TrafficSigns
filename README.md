@@ -87,36 +87,18 @@ The code for the final model is located in cell 10 of the notebook. The model co
 ####**4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.**
 
 After defining the model architecture, its weights have been initialized with a truncated normal distribution (mean=0 and sigma=0.1) and the model was trained for 20 epochs using the Adam optimizer.
-The learning rate was set to 0.001 and a btach size of 128 images was chosen.
-The code for training the model is in cells 11 and 12 of the notebook.
+The learning rate was set to 0.001 and a batch size of 128 images was chosen. 
+The loss function was described by the cross entropy of the classification result. 
+The code used for training the model is located in cells 11 and 12 of the notebook.
 
+As described under "Model Architecture", the final network is an extension of the LeNet-5 architecture.
+The final model results are ... TODO
 
-
-initialized 
-
-The code for training the model is located in the eigth cell of the ipython notebook. 
-
-To train the model, I used an ....
-
-####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
-
-The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
-
-My final model results were:
 * training set accuracy of ?
 * validation set accuracy of ? 
 * test set accuracy of ?
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
 
