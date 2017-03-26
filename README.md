@@ -14,14 +14,7 @@ In the following writeup some additional commentary is given.
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image_new_signs]: ./new_traffic_signes.png "New traffic sign images"
 
 ---
 
@@ -84,68 +77,47 @@ The code for the final model is located in cell 10 of the notebook. The model co
 
 ### Model Training
 
-####**4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.**
+<!-- ####**4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.** -->
 
-After defining the model architecture, its weights have been initialized with a truncated normal distribution (mean=0 and sigma=0.1) and the model was trained for 20 epochs using the Adam optimizer.
+After defining the model architecture, all of its weights have been initialized with a truncated normal distribution (mean=0 and sigma=0.1).
+The model was trained for 20 epochs (as the validation accuracy did not get better afterwards) using the Adam optimizer on the cross entropy of the classification result as loss function.
 The learning rate was set to 0.001 and a batch size of 128 images was chosen. 
-The loss function was described by the cross entropy of the classification result. 
 The code used for training the model is located in cells 11 and 12 of the notebook.
 
-As described under "Model Architecture", the final network is an extension of the LeNet-5 architecture.
-After training the model, the following results were achieved:
+After training has been completed, the following results were achieved:
 
 | Data Set     |  Accuracy	  | 
 |:------------:|:-----------:| 
-| training     | TODO   | 
+| training     | TODO  | 
 | validation   | TODO 	|
-| test					    |	      |
+| test					    |	TODO  |
+
+<!-- * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+The test accuracy is evidence that the model indeed generalizes what it has learned instead of just overfitting the training data. -->
+
+### Test on new Images
+
+To better asses the models performance, the following eight new images have been downladed from the web and put through the classification pipeline:
+
+![new traffic sign image][image_new_signs]
+
+Most signs are clearly visible with good lighting and should therefore be able to be classified by the model.
+Then again the following points might make classification more difficult for the neural network:
+* image #4 has a corner of the traffic sign obscured 
+* image #6 seems slightly distorted
+* image #8 is covered in dirt
+
+The code for predicting the classification of these new images is found in cell 17 of the notebook.
+As it turns out, 7 of the 8 images could be classified correctly which corresonds to an accuracy of 87.5%.
+This number is approximately in accordance with the previously determined test accuracy of the neural network.
+The only wrong classification result arises from image #8. An attempt to explain this and an attempt to get the correct classification is described in code cell 19 of the notebook.
 
 
+### Test on unrelated Images
 
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
+In code cell 20 two images that are completely unrelated to the training data get put through the classification pipeline and the results are discussed. 
 
-###Test a Model on New Images
+### Visualization of the Network Feature Maps
 
-####**1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.**
-
-Here are five German traffic signs that I found on the web:
-
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
-
-The first image might be difficult to classify because ...
-
-####**2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).**
-
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
-
-Here are the results of the prediction:
-
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
-
-
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
-
-####**3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)**
-
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
+Code cells 21 and 22 perform a visualization of the feature maps after the first and second convolutional layer of the network. 
+While after the first layer a clear comparison can still be made to the original input image, the feature maps after the second convoluational layer already appear very abstract.
