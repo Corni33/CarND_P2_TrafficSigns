@@ -84,7 +84,7 @@ The code for the final model is located in cell 10 of the notebook. The model co
 
 ### Model Training
 
-####**4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.**
+<!-- ####**4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.** -->
 
 After defining the model architecture, all of its weights have been initialized with a truncated normal distribution (mean=0 and sigma=0.1) and the model was trained for 20 epochs using the Adam optimizer using the cross entropy of the classification result as loss function.
 The learning rate was set to 0.001 and a batch size of 128 images was chosen. 
@@ -105,7 +105,12 @@ The test accuracy is evidence that the model indeed generalizes what it has lear
 
 ####**1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.**
 
+To better asses the model performance, the following eight new images have been downladed from the web and put through the classification pipeline:
+
 ![new traffic sign image][image_new_signs]
+
+Most signgs are clearly visible with good lighting. 
+Image #6 is
 
 Here are five German traffic signs that I found on the web:
 
