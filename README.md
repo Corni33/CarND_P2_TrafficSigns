@@ -15,13 +15,6 @@ In the following writeup some additional commentary is given.
 [//]: # (Image References)
 
 [image_new_signs]: ./new_traffic_signes.png "New traffic sign images"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
 
 ---
 
@@ -86,7 +79,8 @@ The code for the final model is located in cell 10 of the notebook. The model co
 
 <!-- ####**4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.** -->
 
-After defining the model architecture, all of its weights have been initialized with a truncated normal distribution (mean=0 and sigma=0.1) and the model was trained for 20 epochs using the Adam optimizer using the cross entropy of the classification result as loss function.
+After defining the model architecture, all of its weights have been initialized with a truncated normal distribution (mean=0 and sigma=0.1).
+The model was trained for 20 epochs (as the validation accuracy did not get better afterwards) using the Adam optimizer on the cross entropy of the classification result as loss function.
 The learning rate was set to 0.001 and a batch size of 128 images was chosen. 
 The code used for training the model is located in cells 11 and 12 of the notebook.
 
