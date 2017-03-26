@@ -26,13 +26,13 @@ The data set contains 34799 training examples, 4410 validation examples and 1263
 All images in the data set have a size of 32x32 pixels. 
 These statistics are calculated in the first code cell of the notebook.
 
-An exploratory visualization of the GTSRB data set is performed in the code cells 2 to 5 of the notebook.
+An exploratory visualization of the data set is performed in the code cells 2 to 5 of the notebook.
 After examining the number of training examples per class, some of the classes with relatively many and some of the classes with relatively few examples are sampled and plotted. 
 
 
 ### Preprocessing
 
-The preprocessing steps, which include grayscaling and normalization of the image pixel data, are contained in the code cells 6 to 8 of the IPython notebook.
+The preprocessing steps, which include grayscaling and normalization of the image pixel data, are contained in the code cells 6 to 8 of the notebook.
 
 During examination of the training data it became apparent, that some classes have a lot less training examples than others. 
 While training the network, these rare classes would occur less often, have less influence on the loss function and as a result would probably be predicted with less accuracy after training has finished. 
@@ -48,7 +48,7 @@ After adjusting merely the number of output classes, the model showed a validati
 To further enhance image classification the convolutional layers have been made deeper and an additional fully connected layer has been added. 
 As these changes introduced many new degrees of freedom, the model started to overfit which caused the validation accuracy to decline.
 To prevent the model from overfitting, dropout has been added to all fully connected layers. 
-The model now reaches a validation accuracy of about 96 to 97%.
+The model now reaches a validation accuracy of about 96%.
 
 The code for the final model is located in cell 10 of the notebook. The model consits of the following layers:
 
@@ -84,20 +84,18 @@ The model was trained for 20 epochs (as the validation accuracy did not get bett
 The learning rate was set to 0.001 and a batch size of 128 images was chosen. 
 The code used for training the model is located in cells 11 and 12 of the notebook.
 
-After training has been completed, the following results were achieved:
+After training has been completed, the following final results were achieved:
 
 | Data Set     |  Accuracy	  | 
 |:------------:|:-----------:| 
-| training     | TODO  | 
-| validation   | TODO 	|
-| test					    |	TODO  |
+| training     | 0.994  | 
+| validation   | 0.967 	|
+| test					    |	0.945  |
 
-<!-- * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-The test accuracy is evidence that the model indeed generalizes what it has learned instead of just overfitting the training data. -->
 
 ### Test on new Images
 
-To better asses the models performance, the following eight new images have been downladed from the web and put through the classification pipeline:
+To better assess the models performance, the following eight new images have been downladed from the web and put through the classification pipeline:
 
 ![new traffic sign image][image_new_signs]
 
@@ -120,4 +118,4 @@ In code cell 20 two images that are completely unrelated to the training data ge
 ### Visualization of the Network Feature Maps
 
 Code cells 21 and 22 perform a visualization of the feature maps after the first and second convolutional layer of the network. 
-While after the first layer a clear comparison can still be made to the original input image, the feature maps after the second convoluational layer already appear very abstract.
+While after the first layer a clear comparison can still be made to the original input image, the feature maps of the second convoluational layer already appear very abstract looking.
