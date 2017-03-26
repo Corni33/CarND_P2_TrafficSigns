@@ -116,39 +116,14 @@ Then again the following points might make classification more difficult for the
 The code for predicting the classification of these new images is found in cell 17 of the notebook.
 As it turns out, 7 of the 8 images could be classified correctly which corresonds to an accuracy of 87.5%.
 This number is approximately in accordance with the previously determined test accuracy of the neural network.
-The only wrong classification is image #8. An attempt to explain this and an attempt to get the correct classification is described in code cell 19 of the notebook.
+The only wrong classification result arises from image #8. An attempt to explain this and an attempt to get the correct classification is described in code cell 19 of the notebook.
 
 
-####**2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).**
+### Test on unrelated Images
 
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+In code cell 20 two images that are completely unrelated to the training data get put through the classification pipeline and the results are discussed. 
 
-Here are the results of the prediction:
+### Visualization of the Network Feature Maps
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
-
-
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
-
-####**3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)**
-
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
+Code cells 21 and 22 perform a visualization of the feature maps after the first and second convolutional layer of the network. 
+While after the first layer a clear comparison can still be made to the original input image, the feature maps after the second convoluational layer already appear very abstract.
