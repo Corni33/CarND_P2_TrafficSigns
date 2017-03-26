@@ -14,7 +14,7 @@ In the following writeup some additional commentary is given.
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
+[image_new_signs]: ./new_traffic_signes.png "New traffic sign images"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
@@ -86,28 +86,26 @@ The code for the final model is located in cell 10 of the notebook. The model co
 
 ####**4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.**
 
-After defining the model architecture, its weights have been initialized with a truncated normal distribution (mean=0 and sigma=0.1) and the model was trained for 20 epochs using the Adam optimizer.
+After defining the model architecture, all of its weights have been initialized with a truncated normal distribution (mean=0 and sigma=0.1) and the model was trained for 20 epochs using the Adam optimizer using the cross entropy of the classification result as loss function.
 The learning rate was set to 0.001 and a batch size of 128 images was chosen. 
-The loss function was described by the cross entropy of the classification result. 
 The code used for training the model is located in cells 11 and 12 of the notebook.
 
-As described under "Model Architecture", the final network is an extension of the LeNet-5 architecture.
-After training the model, the following results were achieved:
+After training has been completed, the following results were achieved:
 
 | Data Set     |  Accuracy	  | 
 |:------------:|:-----------:| 
-| training     | TODO   | 
+| training     | TODO  | 
 | validation   | TODO 	|
-| test					    |	      |
+| test					    |	TODO  |
 
+<!-- * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+The test accuracy is evidence that the model indeed generalizes what it has learned instead of just overfitting the training data. -->
 
-
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
-
-###Test a Model on New Images
+###Test on new Images
 
 ####**1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.**
+
+![new traffic sign image][image_new_signs]
 
 Here are five German traffic signs that I found on the web:
 
