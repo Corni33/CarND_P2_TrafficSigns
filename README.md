@@ -64,19 +64,19 @@ The code for the final model is located in cell 10 of the notebook. The model co
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32 grayscale image   							                 | 
 | Convolution 5x5 | 1x1 stride, valid padding, output = 28x28x10 	|
-| RELU					       |												                                     |
+| ReLU					       |												                                     |
 | Max pooling	2x2 | 2x2 stride, valid padding, output = 14x14x10 				 |
 | Convolution 5x5 | 1x1 stride, valid padding, output = 10x10x20 	|
-| RELU					       |												                                     |
+| ReLU					       |												                                     |
 | Max pooling	2x2 | 2x2 stride, valid padding, output = 5x5x20 				   |
 | Fully connected		| input = 500, output = 120        					|
-| RELU					       |												                                  |
+| ReLU					       |												                                  |
 | Dropout					       |												                               |
 | Fully connected		| input = 120, output = 84        					|
-| RELU					       |												                                  |
+| ReLU					       |												                                  |
 | Dropout					       |												                               |
 | Fully connected		| input = 84, output = 60        					|
-| RELU					       |												                                  |
+| ReLU					       |												                                  |
 | Dropout					       |												                               |
 | Fully connected		| input = 60, output = 43        					|
 | Softmax				     |         									|
@@ -92,11 +92,14 @@ The loss function was described by the cross entropy of the classification resul
 The code used for training the model is located in cells 11 and 12 of the notebook.
 
 As described under "Model Architecture", the final network is an extension of the LeNet-5 architecture.
-The final model results are ... TODO
+After training the model, the following results were achieved:
 
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+| Data Set     |  Accuracy	  | 
+|:------------:|:-----------:| 
+| training     | TODO   | 
+| validation   | TODO 	|
+| test					    |	      |
+
 
 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
