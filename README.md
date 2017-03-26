@@ -105,19 +105,16 @@ The test accuracy is evidence that the model indeed generalizes what it has lear
 
 ####**1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.**
 
-To better asses the model performance, the following eight new images have been downladed from the web and put through the classification pipeline:
+To better asses the models performance, the following eight new images have been downladed from the web and put through the classification pipeline:
 
 ![new traffic sign image][image_new_signs]
 
-Most signgs are clearly visible with good lighting. 
-Image #6 is
+Most signs are clearly visible with good lighting and should therefore be able to be classified by the model.
+Then again the following points might make classification more difficult for the neural network:
+* image #4 has a corner of the traffic sign obscured 
+* image #6 seems slightly distorted
+* image #8 is covered in dirt
 
-Here are five German traffic signs that I found on the web:
-
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
-
-The first image might be difficult to classify because ...
 
 ####**2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).**
 
