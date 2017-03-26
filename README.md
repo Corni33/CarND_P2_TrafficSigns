@@ -101,9 +101,7 @@ After training has been completed, the following results were achieved:
 <!-- * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
 The test accuracy is evidence that the model indeed generalizes what it has learned instead of just overfitting the training data. -->
 
-###Test on new Images
-
-####**1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.**
+### Test on new Images
 
 To better asses the models performance, the following eight new images have been downladed from the web and put through the classification pipeline:
 
@@ -114,6 +112,11 @@ Then again the following points might make classification more difficult for the
 * image #4 has a corner of the traffic sign obscured 
 * image #6 seems slightly distorted
 * image #8 is covered in dirt
+
+The code for predicting the classification of these new images is found in cell 17 of the notebook.
+As it turns out, 7 of the 8 images could be classified correctly which corresonds to an accuracy of 87.5%.
+This number is approximately in accordance with the previously determined test accuracy of the neural network.
+The only wrong classification is image #8. An attempt to explain this and an attempt to get the correct classification is described in code cell 19 of the notebook.
 
 
 ####**2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).**
